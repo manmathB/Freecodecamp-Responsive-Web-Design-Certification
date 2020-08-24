@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <style>
+        body {
+            background: linear-gradient(7deg, rgb(57, 202, 221), yellow)
+        }
+
+        #title {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        #description {
+            text-align: center;
+        }
+
+        label {
+            margin: 10px 0px 0px 20px;
+        }
+        #flex-container {
+            display: flex;
+            width: 70%;
+            background: linear-gradient(0deg, rgb(248, 27, 82), rgb(18, 218, 218));
+            align-content: center;
+            margin: 0 auto 0 auto;
+            flex-direction: column;
+            }
+        
+        #name {
+            margin: 5px 20px 30px 20px;
+            border-radius: 3px;
+
+        }
+
+        #Email {
+            margin: 5px 20px 30px 20px;
+            border-radius: 3px;
+        }
+
+        #age {
+            margin: 5px 20px 30px 20px;
+            border-radius: 3px;
+        }
+    </style>
+    <body>
+        <h1 id="title">Welcome to manmathb's survey</h1>
+        <p id="description">Thank you for taking time to help me improve your experience here</p>
+        <form id="flex-container">
+                <label for="name">Name</label><input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="Email">Email id</label><input type="text" id="Email" name="Email" placeholder="Enter your email id">
+                <label for="age">Age</label><input type="number" id="age" name="age" min="5" max="100" placeholder="Enter your age" required>
+                <button type="submit">Submit</button>
+        </form>
+
+        
+              
+
+    </body>
+</html>
