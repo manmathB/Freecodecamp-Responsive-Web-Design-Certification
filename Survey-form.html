@@ -18,7 +18,7 @@
         label {
             margin: 10px 0px 0px 20px;
         }
-        #flex-container {
+        #survey-form {
             display: flex;
             width: 70%;
             background: linear-gradient(0deg, rgb(248, 27, 82), rgb(18, 218, 218));
@@ -30,31 +30,115 @@
         #name {
             margin: 5px 20px 30px 20px;
             border-radius: 3px;
-
+            height: 35px;
+            font-size: 20px;
         }
 
         #Email {
             margin: 5px 20px 30px 20px;
             border-radius: 3px;
+            height: 35px;
+            font-size: 20px;
         }
 
         #age {
             margin: 5px 20px 30px 20px;
             border-radius: 3px;
+            height: 35px;
+            font-size: 20px;
+        }
+
+        #employment {
+            margin: 5px 20px 30px 20px;
+            border-radius: 3px;
+            height: 35px;
+            font-size: 20px;
+        }
+
+        #dob {
+            margin: 5px 20px 30px 20px;
+            border-radius: 3px;
+            height: 35px;
+            font-size: 20px;
+        }
+
+        #recommend {
+            margin: 5px 20px 0px 20px;
+        }
+
+        #surely {
+            margin: 5px 0px 5px 20px;
+        }
+
+        #maybe {
+            margin: 5px 0px 5px 20px;
+        }
+
+        #no {
+            margin: 5px 0px 5px 20px;
+        }
+
+        #content {
+            margin: 5px 20px 0px 20px;
+        }
+
+        #checkboxes {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        #suggestions {
+            margin: 25px 20px 0px 20px;
+        }
+
+        #suggestions-box {
+            margin: 5px 20px 0px 20px;
+            min-height: 50px;
+        }
+
+        #submit {
+            margin: 5px 50px 30px 50px;
+            background-color: rgb(131, 124, 124);
+            color: white;
+            height: 30px;
         }
     </style>
     <body>
         <h1 id="title">Welcome to manmathb's survey</h1>
         <p id="description">Thank you for taking time to help me improve your experience here</p>
-        <form id="flex-container">
-                <label for="name">Name</label><input type="text" id="name" name="name" placeholder="Enter your name" required>
-                <label for="Email">Email id</label><input type="text" id="Email" name="Email" placeholder="Enter your email id">
-                <label for="age">Age</label><input type="number" id="age" name="age" min="5" max="100" placeholder="Enter your age" required>
-                <button type="submit">Submit</button>
+        <form id="survey-form">
+                <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="Email">Email id</label>
+                    <input type="email" id="Email" name="Email" placeholder="Enter your email id">
+                <label for="dob">Enter your date of birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="5" max="100" placeholder="Enter your age" required>
+                <label for="employment">Employment status</label>
+                    <select id="employment" name="employment" required>
+                        <option value="" disabled>Select you current employement status</option>
+                        <option value="Student">Student</option>
+                        <option value="Employed - Full time">Employed - Full time</option>
+                        <option value="Employed - Part time">Employed - Part time</option>
+                        <option value="Unemployed">Unemployed</option>
+                    </select>
+                <p id="recommend">Would you recommend my blog to your friends?<p>
+                    <input type="radio" id="surely" name="recommendation" value="Surely">
+                    <label for="surely">Surely</label><br>
+                    <input type="radio" id="maybe" name="recommendation" value="Maybe">
+                    <label for="maybe">Maybe</label><br>
+                    <input type="radio" id="no" name="recommendation" value="no">
+                    <label for="no">No</label><br>
+                <p id="content">What kind of content would you like to see more on the blog?</p>
+                    <label id="checkboxes"><input type="checkbox" name="preferrence" value="movie reviews" >movie reviews</label>
+                    <label id="checkboxes"><input type="checkbox" name="preferrence" value="football tactics">football tactics</label>
+                    <label id="checkboxes"><input type="checkbox" name="preferrence" value="manga reviews" >manga reviews</label>
+                    <label id="checkboxes"><input type="checkbox" name="preferrence" value="anime reviews" >anime reviews</label>
+                <p id="suggestions">Enter any other comments or suggestions</p>
+                    <textarea placeholder="Enter your comment/suggestion here..." id="suggestions-box"></textarea>
+                <button type="submit" id="submit">Submit</button>
         </form>
-
-        
-              
 
     </body>
 </html>
