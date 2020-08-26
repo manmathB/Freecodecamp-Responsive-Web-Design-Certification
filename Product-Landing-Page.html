@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <style>
+        #header {
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            position: fixed;
+            justify-content: flex-start;
+            align-items: stretch;
+            background-color: beige;
+        }
+
+        #Man-Utd {
+            display: flex;
+            flex-direction: row;
+            width: 60%;
+        }
+
+        #header-img {
+            width: 5%;
+            padding: 20px 15px 20px 20px;
+        }
+
+        h1 {
+            align-self: center;
+            color: rgb(10,10,35);
+        }
+
+        #nav-bar {
+            align-self: center;
+            display: flex;
+            flex-direction: row;
+            width: 40%;
+            justify-content: space-around;
+            color: rgb(10,10,35);
+        }
+    </style>
+    <body>
+        <header id="header">
+            <div id="Man-Utd">
+                <img src="man-utd.png" id="header-img" alt="Manchester United logo">
+                <h1>Manchester United</h1>
+            </div>
+            <nav id="nav-bar">
+                <a href="#Features" class="nav-link">Features</a>
+                <a href="#Promo" class="nav-link">Promo</a>
+                <a href="#Pricing" class="nav-link">Pricing</a>
+            </nav>
+        </header>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+            <input type="submit" name="submit" id="submit" value="Subscribe">
+        </form>
+    </body>
+</html>
