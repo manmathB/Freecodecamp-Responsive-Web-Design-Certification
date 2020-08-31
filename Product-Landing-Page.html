@@ -8,6 +8,7 @@
         #header {
             top: 0;
             left: 0;
+            right: 0;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -69,11 +70,13 @@
         }
 
         #form {
-
+            display: flex;
+            flex-direction: column;
         }
 
         #email {
             height: 35px;
+            margin-bottom: 10px;
         }
 
         #email:focus {
@@ -106,9 +109,17 @@
             padding: 0px;
         }
 
+        #details > h2 {
+            margin-bottom: 0px;
+        }
+
+        #details > p {
+            margin-top: 0px;
+        }
+
         #Pricing {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             width: 80%;
             margin: 20px auto;
         }
@@ -142,6 +153,37 @@
         #kit-image {
             height: 300px;
         }
+
+        #price {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #select {
+            background-color: rgb(40,40,40);
+            color: white;
+            font-size: 20px;
+        }
+
+        #select:hover {
+            animation-name: sel-but;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes sel-but {
+            100% {background-color: black;}
+        }
+
+        #Promo {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-height: 800px) {
+                p {
+                font-size: 10px;
+        }
     </style>
     <body>
         <header id="header">
@@ -160,7 +202,7 @@
             <h2>Our new jersies for new season</h2>
             <form id="form" action="https://www.freecodecamp.com/email-submit">
                 <input type="email" name="email" id="email" placeholder="Enter your email address" required>
-                <input type="submit" name="submit" id="subscribe" value="Subscribe">
+                <input type="submit" name="submit" id="submit" value="Subscribe">
             </form>
         </div>
         
@@ -190,14 +232,22 @@
             </div>
         </section>
 
+        <section id="Promo">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Xu_UTB-RaEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
         <section id="Pricing">
             <div id="home">
                 <p id="kit-header"><strong>Home kit</strong></p>
                 <img src="home-kit.jpg" alt="Image showing 2020-21 red coloured home kit" id="kit-image">
+                <p id="price">$60</p>
+                <button id="select">SELECT</button>
             </div>
             <div id="away">
                 <p id="kit-header"><strong>Away kit</strong></p>
                 <img src="away-kit.jpg" alt="Image showing 2020-21 black coloured away kit" id="kit-image">
+                <p id="price">$60</p>
+                <button id="select">SELECT</button>
             </div>
         </section>
     </body>
