@@ -2,6 +2,9 @@
 
 <html>
     <style>
+        body {
+            background-color: beige
+        }
         #header {
             top: 0;
             left: 0;
@@ -11,7 +14,7 @@
             position: fixed;
             justify-content: flex-start;
             align-items: stretch;
-            background-color: beige;
+            background-color: rgb(202, 202, 170);
         }
 
         #Man-Utd {
@@ -38,6 +41,107 @@
             justify-content: space-around;
             color: rgb(10,10,35);
         }
+
+        a {
+            color: white;
+            text-decoration: none;
+            background-color: rgb(40,40,40);
+            padding: 15px 30px;
+            text-align: center; 
+            border-radius: 3px;
+        }
+
+        a:hover {
+            animation-name: buttons;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes buttons {
+            100% {background-color: black;}
+        }
+
+        #asdf {
+            display: flex;
+            flex-direction: column;
+            margin-top:100px;
+            align-items:center;
+        }
+
+        #form {
+
+        }
+
+        #email {
+            height: 35px;
+        }
+
+        #email:focus {
+            border-radius: 5px;
+            border-color: yellow;
+        }
+
+        #Features {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin: 20px auto;
+        }
+
+        #points {
+            display: flex;
+            align-items: center;
+        }
+
+        #icons {
+            height: 50px;
+        }
+
+        #details {
+            display: flex;
+            flex-direction: column;
+            margin: 0px auto 0px 20px;
+            padding: 0px;
+        }
+
+        #Pricing {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            border-color: black;
+            border-radius: 3px;
+            border-width: 3px;
+            border-style: solid;
+        }
+
+        #away {
+            display: flex;
+            flex-direction: column;
+            border-color: black;
+            border-radius: 3px;
+            border-width: 3px;
+            border-style: solid;
+        }
+
+        #kit-header {
+            background-color: rgb(202, 202, 170);
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 20px;
+        }
+
+        #kit-image {
+            height: 300px;
+        }
     </style>
     <body>
         <header id="header">
@@ -51,9 +155,50 @@
                 <a href="#Pricing" class="nav-link">Pricing</a>
             </nav>
         </header>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-            <input type="email" name="email" id="email" placeholder="Enter your email address" required>
-            <input type="submit" name="submit" id="submit" value="Subscribe">
-        </form>
+
+        <div id="asdf">
+            <h2>Our new jersies for new season</h2>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                <input type="submit" name="submit" id="subscribe" value="Subscribe">
+            </form>
+        </div>
+        
+        <section id="Features">
+            <div id="points">
+                <img src="quality.png" id="icons">
+                <div id="details">
+                    <h2>
+                        Premium Materials
+                    </h2>
+                    <p>
+                        Our jersies are made of premium quality sport garments which will last longer, are washable, will reamin wrinkles free
+                    </p>
+                </div>
+            </div>
+
+            <div id="points">
+                <img src="numbers.png" id="icons">
+                <div id="details">
+                    <h2>
+                        Customizable Numbers and Names
+                    </h2>
+                    <p>
+                        You can get shirt number nad name of your favorite players. Or you can just print out your own name and your favorite number.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="Pricing">
+            <div id="home">
+                <p id="kit-header"><strong>Home kit</strong></p>
+                <img src="home-kit.jpg" alt="Image showing 2020-21 red coloured home kit" id="kit-image">
+            </div>
+            <div id="away">
+                <p id="kit-header"><strong>Away kit</strong></p>
+                <img src="away-kit.jpg" alt="Image showing 2020-21 black coloured away kit" id="kit-image">
+            </div>
+        </section>
     </body>
 </html>
