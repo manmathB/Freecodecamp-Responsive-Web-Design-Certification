@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+    #navbar {
+        position: fixed;
+        width: 300px;
+        border-right-style: solid;
+        border-right-width: 5px;
+        height: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:visited {
+        color: black;
+    }
+
+    #main-doc {
+        margin-left: 320px;
+    }
+
+    #link {
+        border-bottom: black;
+        margin-bottom: 20px;
+        border-top-style: solid;
+    }
+
+    #navbar > ul {
+        list-style-type:none;
+        width: 100%;
+        padding: 0;
+    }
+
+    body{
+        top: 0px;
+        left: 0px;
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+        <header>
+            <h1>Python Documentation</h1>
+        </header>
+        <ul>
+            <li id="link">
+                <a href="#Introduction" class="nav-link">
+                    Introduction
+                </a>
+            </li>
+            <li id="link">
+                <a href="#Whetting_Your_Appetite" class="nav-link">
+                    Whetting Your Appetite
+                </a>
+            </li>
+            <li id="link">
+                <a href="#Using_the_Python_Interpreter" class="nav-link">
+                    Using the Python Interpreter
+                </a>
+            </li id="link">
+                <ul>
+                    <li id="link">
+                        <a href="#Invoking_the_Interpreter" class="nav-link">
+                            Invoking the Interpreter
+                        </a>
+                    </li>
+                    <li id="link">
+                        <a href="#The_Interpreter_and_Its_Environment" class="nav-link">
+                            The Interpreter and Its Environment
+                        </a>
+                    </li>
+                </ul>
+            <li id="link">
+                <a href="#An_Informal_Introduction_to_Python" class="nav-link">
+                    An Informal Introduction to Python
+                </a>
+            </li>
+            <li id="link">
+                <a href="#More_Control_Flow_Tools" class="nav-link">
+                    More Control Flow Tools
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>
+                <h1>Introduction</h1>
+            </header>
+            <p>
+                Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
+            </p>
+            <p>
+                The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python Web site, https://www.python.org/, and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation.
+            </p>
+            <p>
+                The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python is also suitable as an extension language for customizable applications.
+            </p>
+            <p>
+                This tutorial introduces the reader informally to the basic concepts and features of the Python language and system. It helps to have a Python interpreter handy for hands-on experience, but all examples are self-contained, so the tutorial can be read off-line as well.
+            </p>
+            <p>
+                For a description of standard objects and modules, see The Python Standard Library. The Python Language Reference gives a more formal definition of the language. To write extensions in C or C++, read Extending and Embedding the Python Interpreter and Python/C API Reference Manual. There are also several books covering Python in depth.
+            </p>
+            <p>
+                This tutorial does not attempt to be comprehensive and cover every single feature, or even every commonly used feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of the language’s flavor and style. After reading it, you will be able to read and write Python modules and programs, and you will be ready to learn more about the various Python library modules described in The Python Standard Library.
+            </p>
+            <p>
+                The Glossary is also worth going through.
+            </p>
+            <ol>
+                <li>
+                    Whetting Your Appetite
+                </li>
+                <li>
+                    Using the Python Interpreter
+                </li>
+                    <ul>
+                        <li>
+                            Invoking the Interpreter
+                        </li>
+                        <li>
+                            The Interpreter and Its Environment
+                        </li>
+                    </ul>
+                <li>
+                    An Informal Introduction to Python
+                </li>
+                <li>
+                    More Control Flow Tools
+                </li>
+            </ol>
+        </section>
+
+        <section id="Whetting_Your_Appetite" class="main-section">
+            <header>
+                <h1>Whetting Your Appetite</h1>
+            </header>
+            <p>
+                If you do much work on computers, eventually you find that there’s some task you’d like to automate. For example, you may wish to perform a search-and-replace over a large number of text files, or rename and rearrange a bunch of photo files in a complicated way. Perhaps you’d like to write a small custom database, or a specialized GUI application, or a simple game.
+                <br>
+                If you’re a professional software developer, you may have to work with several C/C++/Java libraries but find the usual write/compile/test/re-compile cycle is too slow. Perhaps you’re writing a test suite for such a library and find writing the testing code a tedious task. Or maybe you’ve written a program that could use an extension language, and you don’t want to design and implement a whole new language for your application.
+            </p>
+        </section>
+
+        <section id="Using_the_Python_Interpreter" class="main-section">
+            <header>
+                <h1>Using the Python Interpreter</h1>
+            </header>
+        
+        <section id="Invoking_the_Interpreter" class="main-section">
+            <header>
+                <h3>Invoking the Interpreter</h3>
+            </header>
+            <p>
+                The Python interpreter is usually installed as /usr/local/bin/python3.8 on those machines where it is available; putting /usr/local/bin in your Unix shell’s search path makes it possible to start it by typing the command: python3.8
+            </p>
+        </section>
+        
+        <section id="The_Interpreter_and_Its_Environment" class="main-section">
+            <header>
+                <h3>The Interpreter and Its Environment</h3>
+            </header>
+            <p>
+                By default, Python source files are treated as encoded in UTF-8. In that encoding, characters of most languages in the world can be used simultaneously in string literals, identifiers and comments — although the standard library only uses ASCII characters for identifiers, a convention that any portable code should follow. To display all these characters properly, your editor must recognize that the file is UTF-8, and it must use a font that supports all the characters in the file.
+            </p>
+        </section>
+            
+        </section>
+
+        <section id="An_Informal_Introduction_to_Python" class="main-section">
+            <header>
+                <h1>An Informal Introduction to Python</h1>
+            </header>
+            <p>
+                In the following examples, input and output are distinguished by the presence or absence of prompts (>>> and …): to repeat the example, you must type everything after the prompt, when the prompt appears; lines that do not begin with a prompt are output from the interpreter. Note that a secondary prompt on a line by itself in an example means you must type a blank line; this is used to end a multi-line command.<br><br>
+                Many of the examples in this manual, even those entered at the interactive prompt, include comments. Comments in Python start with the hash character, #, and extend to the end of the physical line. A comment may appear at the start of a line or following whitespace or code, but not within a string literal. A hash character within a string literal is just a hash character. Since comments are to clarify code and are not interpreted by Python, they may be omitted when typing in examples.
+            </p>
+        </section>
+
+        <section id="More_Control_Flow_Tools" class="main-section">
+            <header>
+                <h1>More Control Flow Tools</h1>
+            </header>
+            <p>
+                Besides the while statement just introduced, Python uses the usual flow control statements known from other languages, with some twists.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
